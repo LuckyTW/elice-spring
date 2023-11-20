@@ -9,6 +9,10 @@ public class Vehicle {
 
     private String name;
 
+    public Vehicle() {
+        System.out.println("Vehicle bean created by Spring");
+    }
+
     public String getName() {
         return name;
     }
@@ -17,18 +21,15 @@ public class Vehicle {
         this.name = name;
     }
 
-    @PostConstruct
-    public void init() {
-        this.name = "Honda";
-    }
-
-    @PreDestroy
-    public void destroy() {
-        System.out.println("destroying vehicle bean");
-    }
 
     public void printHello() {
         System.out.println("Hello!");
     }
 
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
