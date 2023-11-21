@@ -1,12 +1,18 @@
 package com.example.elice.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Person {
 
-    private String name;
-    private Vehicle vehicle;
+    private String name = "Lucky";
 
-    public Person() {
-        System.out.println("Person bean created by Spring");
+    private final Vehicle vehicle;
+
+    @Autowired
+    public Person(Vehicle vehicle) {
+        this.vehicle = vehicle;
     }
 
     public String getName() {
@@ -21,7 +27,7 @@ public class Person {
         return vehicle;
     }
 
-    public void setVehicle(Vehicle vehicle) {
-        this.vehicle = vehicle;
-    }
+//    public void setVehicle(Vehicle vehicle) {
+//        this.vehicle = vehicle;
+//    }
 }

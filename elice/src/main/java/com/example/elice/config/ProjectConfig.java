@@ -10,21 +10,21 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "com.example.elice.beans")
 public class ProjectConfig {
 
-    @Bean
-    Vehicle vehicle() {
-        Vehicle vehicle = new Vehicle();
-        vehicle.setName("Toyota");
-
-        return vehicle;
-    }
-
-    @Bean
-    public Person person() {
-        Person person = new Person();
-        person.setName("Lucy");
-        person.setVehicle(vehicle());
-        return person;
-    }
+//    @Bean
+//    Vehicle vehicle() {
+//        Vehicle vehicle = new Vehicle();
+//        vehicle.setName("Toyota");
+//
+//        return vehicle;
+//    }
+//
+//    @Bean
+//    public Person person(Vehicle vehicle) {
+//        Person person = new Person();
+//        person.setName("Lucy");
+//        person.setVehicle(vehicle);
+//        return person;
+//    }
 
 //    @Bean
 //    Vehicle vehicle2() {
