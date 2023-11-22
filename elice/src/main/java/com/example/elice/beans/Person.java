@@ -1,9 +1,11 @@
 package com.example.elice.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component(value = "personBean")
+@Lazy
 public class Person {
 
     private String name = "Lucky";
@@ -12,6 +14,7 @@ public class Person {
 
     @Autowired
     public Person(Vehicle vehicle) {
+        System.out.println("Person bean created by Spring");
         this.vehicle = vehicle;
     }
 
