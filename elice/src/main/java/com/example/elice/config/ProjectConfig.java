@@ -5,9 +5,12 @@ import com.example.elice.beans.Vehicle;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
-@ComponentScan(basePackages = "com.example.elice.beans")
+@ComponentScan(basePackages = {"com.example.elice.implementation",
+        "com.example.elice.services", "com.example.elice.aspects"})
+@EnableAspectJAutoProxy
 public class ProjectConfig {
 
 //    @Bean
